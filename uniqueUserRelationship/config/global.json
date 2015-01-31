@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "Lopop": {
+            "applicationId": "9Of1MI65pusWlQ4qXlXOzQSjsqFDLQbpxe6DepXk", 
+            "masterKey": "xKxVfvBQHPEArN1nt93QrS5PTcwfahXaCjMLOrdX"
+        }, 
+        "_default": {
+            "link": "Lopop"
+        }
+    }
+}

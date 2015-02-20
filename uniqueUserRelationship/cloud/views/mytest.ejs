@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= customized_name %></title>
+     <meta name="viewport" content="initial-scale=0.8, user-scalable=no">
+    <meta charset="utf-8">
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 20px;
+        padding: 0px
+      }
+      p, img {
+      	display:inline;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+			var map;
+			function initialize() {
+			  var mapOptions = {
+			    zoom: 8,
+			    center: new google.maps.LatLng(-34.397, 150.644)
+			  };
+			  map = new google.maps.Map(document.getElementById('map-canvas'),
+			      mapOptions);
+			}
+			google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <p><%= username %></p><% for(var i = 0; i < star_rate; i ++) {%> <img src="images/doge.gif" height="50" width="50">
+  	<%}%>
+  	<br>
+  	<img src="images/doge.gif" height = "100" width = "100">
+  	<br>
+    <p><%= message %></p>
+    <br>
+    <a href="music://">Click me!</a>
+    <br>
+    <div id="map-canvas"></div>
+    
+  </body>
+
+</html>

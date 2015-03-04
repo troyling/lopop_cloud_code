@@ -1,4 +1,6 @@
-require('cloud/app.js');
+require("cloud/app.js");
+require("cloud/userRating.js");
+
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 // For example:
 var userRelationship = Parse.Object.extend("UserRelationship");

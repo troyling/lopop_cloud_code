@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Test</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-xs-3">
+				<img id="profilePic" src=<%= profile_pic %> class="img-circle" 
+					style="width: 100%; height: 100%;">
+			</div>
+			<div class="col-xl-5">
+				<h5><%= username %></h5>
+				<br>
+				<p>rating here</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<img src=<%= item_pic %> class="img-thumbnail">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<h5><%= message %></h2>
+			</div>
+		</div>
+
+
+
+	</div>
+	</body>
+</html>

@@ -32,6 +32,9 @@ app.get('/hello/:id', function(req, res) {
             var User = Parse.Object.extend("User");
             var userQuery = new Parse.Query(User);
             var item_picz = pop.get("images");
+            var location = pop.get("location");
+            var parLat = location["latitude"];
+            var parLng = location["longitude"];
             //res.send(item_pic[0]["_url"]);
             //res.send(description);
             userQuery.get(userId.id, {
@@ -42,7 +45,7 @@ app.get('/hello/:id', function(req, res) {
                     //res.send(pic);
 
                     //res.render('mytest', {customized_name: 'lopop page', username: username, message: description, star_rate: 5, profile_pic: pic, item_pic: item_picz[0]["_url"]});
-                    res.render('test', {customized_name: 'lopop page', username: username, message: description, star_rate: 5, profile_pic: pic, item_pic: item_picz[0]["_url"]});
+                    res.render('test', {customized_name: 'lopop page', username: username, message: description, star_rate: 5, profile_pic: pic, item_pic: item_picz[0]["_url"], lat: parLat, lng: parLng});
                 },
                 error: function(object, error) {
                     res.send('user not found');
@@ -59,8 +62,8 @@ app.get('/hello/:id', function(req, res) {
 
 
 });
-app.get('/test', function(req, res) {
-    res.render('test');
+app.get('/map', function(req, res) {
+    res.render('map');
 });
 
 // app.get('/hello', function(req, res) {
